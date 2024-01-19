@@ -1,0 +1,12 @@
+:root {
+  --lightBackground: #2a2b2a;
+  --footerBackground: #1a1e1f;
+  --darkBackground: #161616;
+  --border: #4a4b4a;
+  --bluetext: #0e4b61;
+  --whiteText: #e8e9e8;
+  --boldWhiteText: #f4f5f5;
+}
+.layout>img{
+  width: 200px;
+}
