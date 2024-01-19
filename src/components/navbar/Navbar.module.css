@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--darkBackground);
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 54% 46%;
+}
+.logo {
+  display: flex;
+  justify-content: left;
+}
+.logo > img {
+  max-width: 200px;
+  margin-left: 20px;
+}
+
+.navLinks {
+  display: inline-flex;
+}
+.link,
+.usaid {
+  color: var(--whiteText);
+  text-decoration: none;
+  font-size: 17px;
+  height: 17px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.usaid {
+  color: var(--activeLink);
+}
+.link:hover {
+  color: var(--activeLink);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.logo:hover{
+    cursor: pointer;
+}

@@ -1,4 +1,3 @@
-import classes from "./Layout.module.css";
 import ufcLogoSvg from "../../assets/sliderImages/ufc.svg";
 import tegetaLogo from "../../assets/sliderImages/tegeta.svg";
 import spaceLogo from "../../assets/sliderImages/space.svg";
@@ -7,9 +6,9 @@ import spectreLogo from "../../assets/sliderImages/spectre.svg";
 import usaidLogo from "../../assets/sliderImages/usaid.svg";
 import tbcLeasingLogo from "../../assets/sliderImages/tbcleasing.svg";
 
-const Layout = () => {
+const Slider = () => {
   return (
-    <div className={classes.layout}>
+    <div>
       <img src={ufcLogoSvg} alt="ufclogo"></img>
       <img src={tegetaLogo} alt="ufclogo"></img>
       <img src={spaceLogo} alt="ufclogo"></img>
@@ -21,4 +20,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default Slider;
