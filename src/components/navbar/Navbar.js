@@ -9,7 +9,7 @@ const Navbar = () => {
   const [dropMenu, setDropMenu] = useState(false);
   // For responsive navbar/dropdown menu
   const showMenu = () => {
-    if (window.innerWidth > 1150) {
+    if (window.innerWidth >725) {
       showNavbar(true);
 
       setDropdown(false);

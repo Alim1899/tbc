@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "tallAcad";
+  src: local("acad"), url("../../assets/fonts/mtavruli/mtavruli.ttf");
+}
+@font-face {
+  font-family: "arialBold";
+  src: local("arial"), url("../../assets/fonts/arial/arial.ttf");
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.head {
+  height: 352px;
+  max-width: 1150px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headOne,
+.headTwo {
+  color: var(--whiteText);
+  font-weight: 800;
+  margin: 5px;
+  margin-left: 20px;
+  font-size: 2rem;
+}
+.headOne {
+  letter-spacing: -2px;
+  font-family: arial;
+  font-size: 3rem;
+}
+.headTwo {
+  font-family:tallAcad;
+  letter-spacing: 2px;
+  font-size: 2.45rem;
+}
+
+.span {
+  margin: 8px;
+}
+
+.background {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  height: 390px;
+  object-fit: cover;
+  width: 100vw;
+}
