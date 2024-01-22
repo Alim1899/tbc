@@ -1,42 +1,34 @@
-@font-face {
-  font-family: "tallAcad";
-  src: local("acad"), url("../../assets/fonts/mtavruli/mtavruli.ttf");
-}
-@font-face {
-  font-family: "arialBold";
-  src: local("arial"), url("../../assets/fonts/arial/arial.ttf");
-}
 .main {
-  display: flex;
-  justify-content: center;
+height: 392px;
+margin-top: 92px;
+}
+.headers{
+  width: var(--contentWidth);
+  margin: auto;
+  margin-top: -300px;  
 }
 .head {
-  height: 352px;
-  max-width: 1150px;
-  width: 100%;
-  position: absolute;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  overflow: hidden;
+
 }
 .headOne,
 .headTwo {
   color: var(--whiteText);
   font-weight: 800;
-  margin: 5px;
-  margin-left: 20px;
   font-size: 2rem;
 }
 .headOne {
   letter-spacing: -2px;
   font-family: arial;
   font-size: 3rem;
+  margin-top: 10px;
 }
 .headTwo {
-  font-family:tallAcad;
+  font-family: mtavruli;
   letter-spacing: 2px;
   font-size: 2.45rem;
+  margin-top: -15px;
 }
 
 .span {
@@ -44,10 +36,8 @@
 }
 
 .background {
-  position: absolute;
-  top: 95px;
-  left: 0;
-  height: 390px;
+  max-width: 100%;
+  z-index: -1;
+  height: 392px;
   object-fit: cover;
-  width: 100vw;
 }

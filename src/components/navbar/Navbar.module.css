@@ -1,12 +1,19 @@
-.navbar {
+.main {
+  width: 100vw;
   background-color: var(--darkBackground);
-  height: 100%;
-  width: 100%;
-  max-width: 1150px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar {
+  width: var(--contentWidth);
   display: grid;
   grid-template-columns: 52% 48%;
   grid-template-rows: 100%;
-  position: sticky;
   overflow: hidden;
 }
 .logo {
@@ -14,8 +21,7 @@
   justify-content: left;
 }
 .logo > img {
-  max-width: 200px;
-  margin-left: 20px;
+  width: 200px;
 }
 
 .navLinks {
@@ -58,18 +64,17 @@
   margin-left: 60%;
 }
 
-.closeButton{
+.closeButton {
   opacity: 70%;
   background-color: unset;
   border: none;
-
 }
-.icon{
+.icon {
   height: 50px;
 }
 
-.icon:hover{
-  cursor:pointer;
+.icon:hover {
+  cursor: pointer;
 }
 
 .dropdownMenu {
@@ -92,26 +97,26 @@
   text-align: right;
 }
 .dropNavLinks {
-margin-top: 20px;
+  margin-top: 20px;
 }
-.dropLink, .dropUsaid{
+.dropLink,
+.dropUsaid {
   color: var(--whiteText);
   text-decoration: none;
-font-size: 1.5rem;
-margin: 50px;
+  font-size: 1.5rem;
+  margin: 50px;
 }
-.dropNavLinks>li{
+.dropNavLinks > li {
   margin-top: 10px;
 }
-.dropUsaid{
+.dropUsaid {
   color: var(--activeLink);
 }
-.closeButton{
+.closeButton {
   margin-right: 50px;
 }
 
-
-.icon:after{
+.icon:after {
   content: "";
   position: absolute;
   top: 50%;

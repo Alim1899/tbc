@@ -7,15 +7,24 @@
   --activeLink: #00a3e0;
   --courseDetail: #00aeef;
   --question: #00aef3;
+  --contentWidth:1100px;
+}
+@font-face {
+  font-family: "mtavruli";
+  src: local("mtavruli"), url("../assets/fonts/mtavruli/mtavruli.ttf");
+}
+@font-face {
+  font-family: "arialBold";
+  src: local("arial"), url("../assets/fonts/arial/arial.ttf");
+}
+@font-face {
+  font-family: "tallAcad";
+  src: local("tall"), url("../assets/fonts/tall/tall.ttf");
 }
 
-.navbar {
-  position: sticky;
-  height: 95px;
-  width: 100vw;
-  border: none;
-  display: flex;
-  margin: -8px;
-  justify-content: center;
-  background-color: var(--darkBackground);
+.layout{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
 }
