@@ -1,6 +1,5 @@
 .main {
   width: 100vw;
-  background-color: var(--darkBackground);
   height: 92px;
   display: flex;
   justify-content: center;
@@ -79,25 +78,33 @@
 
 .dropdownMenu {
   overflow: hidden;
-  position: absolute;
   width: 100vw;
-
-  z-index: 999;
-  display: grid;
-  grid-template-columns: 40% 60%;
   height: 100vh;
+  max-height: 1000px;
+  z-index: 999;
+  position: absolute;
+  top: 92px;
+  left: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .blurredArea {
   background-color: var(--darkBackground);
-  opacity: 60%;
+  opacity: 0.7;
+  max-width: 100%;
+  min-width: 10%;
+ 
 }
 .dropContent {
+  min-width: 300px;
   background-color: var(--darkBackground);
   list-style-type: none;
   text-align: right;
 }
 .dropNavLinks {
   margin-top: 20px;
+  z-index: 111;
 }
 .dropLink,
 .dropUsaid {
@@ -130,4 +137,21 @@
   animation: spin 1s linear infinite;
   box-sizing: border-box;
   transform-origin: 50% 50%;
+}
+
+
+
+
+body::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--lightBackground); 
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lightBackground) transparent;
 }

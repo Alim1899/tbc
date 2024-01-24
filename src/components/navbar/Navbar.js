@@ -7,7 +7,12 @@ const Navbar = () => {
   const [navbar, showNavbar] = useState(true);
   const [dropdown, setDropdown] = useState(false);
   const [dropMenu, setDropMenu] = useState(false);
-  // For responsive navbar/dropdown menu
+  const [navbarColor,setNavbarColor] = useState("#1a1e1f")
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY>0)setNavbarColor('#222222f2')
+    else(setNavbarColor('#1a1e1f'))
+  });
+
   const showMenu = () => {
     if (window.innerWidth > 725) {
       showNavbar(true);
@@ -30,7 +35,7 @@ const Navbar = () => {
   window.addEventListener("resize", showMenu);
 
   return (
-    <div className={classes.main}>
+    <div style={{backgroundColor:navbarColor}}  className={classes.main}>
       <div className={classes.navbar}>
         <div className={classes.logo}>
           <img alt="tbcxacademy" src={tbcLogo}></img>
