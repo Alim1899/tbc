@@ -1,0 +1,64 @@
+.main {
+  background-color: var(--coursesbackground);
+  height: 1485px;
+  border-top: 1px solid var(--border);
+  width: 100vw;
+}
+.content {
+  width: var(--contentWidth);
+  margin: auto;
+  height: 100vw;
+}
+.components {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 25px; /* Adjust the gap between cells as needed */
+}
+.header {
+  width: 100%;
+  font-size: 30px;
+  padding-bottom: 70px;
+  padding-top: 30px;
+  color: var(--whiteText);
+}
+.component {
+  min-width: 300px;
+  height: 465px;
+  display: grid;
+
+  outline: 1px solid var(--border);
+}
+.details {
+  color: var(--whiteText);
+}
+.details>img{
+  width: 100%;
+}
+.details > h2,
+.details > h3 {
+  margin-left: 20px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.button > button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--activeLink);
+  background-color: unset;
+  border: none;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.button > button > img {
+  height: 16px;
+  padding-right: 5px;
+}
+.button > button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
