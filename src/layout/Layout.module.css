@@ -22,6 +22,11 @@
   font-family: "tallAcad";
   src: local("tall"), url("../assets/fonts/tall/tall.ttf");
 }
+@font-face {
+  font-family: "sans";
+  src: local("Regular"), url("../assets/fonts/sans/NotoSansGeorgian-VariableFont_wdth\,wght.ttf");
+}
+
 
 .layout{
   position: absolute;
