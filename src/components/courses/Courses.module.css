@@ -2,6 +2,7 @@
   background-color: var(--coursesbackground);
   border-top: 1px solid var(--border);
   width: 100vw;
+  padding-bottom: 50px;
 }
 .content {
   width: var(--contentWidth);

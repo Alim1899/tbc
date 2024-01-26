@@ -1,0 +1,97 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main {
+  background-color: var(--lightBackground);
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+  width: var(--contentWidth);
+  height: 350px;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+}
+.head {
+  color: var(--whiteText);
+  font-size: 2rem;
+  font-family: sans;
+  font-weight: 500;
+}
+.firstSlide > div,
+.secondSlide > div,
+.thirdSlide > div {
+  display: flex;
+}
+.firstSlide,
+.secondSlide,
+.thirdSlide {
+  display: grid;
+  column-gap: 5%;
+  grid-template-columns: 30% 30% 30%;
+  animation-name: appear;
+  animation-duration: 1000ms;
+}
+
+.leftArrow,
+.rightArrow {
+  height: 50px;
+  cursor: pointer;
+}
+.firstSlide > img,
+.secondSlide > img,
+.thirdSlide > img {
+  height: 100%;
+}
+
+.dots {
+  color: var(--whiteText);
+  width: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.4rem;
+}
+.dots > li:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.leftArrow:hover,
+.rightArrow:hover {
+  opacity: 0.6;
+}
