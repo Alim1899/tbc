@@ -9,13 +9,12 @@ import leftSlide from "../../assets/icons/leftslide.svg";
 import rightSlide from "../../assets/icons/rightslide.svg";
 
 import classes from "./Slider.module.css";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 const Slider = () => {
   const [showFirstSlide, setShowFirstSlide] = useState(true);
   const [showSecondSlide, setShowSecondSlide] = useState(false);
   const [showThirdSlide, setShowThirdSlide] = useState(false);
   const [activeSlide, setActiveSlide] = useState(1);
-
   const slider = useCallback(() => {
     if (activeSlide === 1) {
       setShowFirstSlide(true);
@@ -38,13 +37,13 @@ const Slider = () => {
     }
   }, [activeSlide]);
 
+  let timer = setTimeout(() => {
+    setActiveSlide(activeSlide + 1);
+  }, 3500);
   useEffect(() => {
     slider();
-  }, [slider]);
-  setTimeout(() => {
-    setActiveSlide(activeSlide+1)
-  }, 3500);
-  
+    return clearTimeout(timer);
+  }, [slider, timer]);
 
   const changeByButtons = (e) => {
     if (e.target.id === "left") {
