@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useCallback } from "react";
 import ufcLogoSvg from "../../assets/sliderImages/ufc.svg";
 import tegetaLogo from "../../assets/sliderImages/tegeta.svg";
 import spaceLogo from "../../assets/sliderImages/space.svg";
@@ -9,12 +10,13 @@ import leftSlide from "../../assets/icons/leftslide.svg";
 import rightSlide from "../../assets/icons/rightslide.svg";
 
 import classes from "./Slider.module.css";
-import { useState, useEffect, useCallback } from "react";
+
 const Slider = () => {
   const [showFirstSlide, setShowFirstSlide] = useState(true);
   const [showSecondSlide, setShowSecondSlide] = useState(false);
   const [showThirdSlide, setShowThirdSlide] = useState(false);
   const [activeSlide, setActiveSlide] = useState(1);
+
   const slider = useCallback(() => {
     if (activeSlide === 1) {
       setShowFirstSlide(true);
@@ -37,19 +39,22 @@ const Slider = () => {
     }
   }, [activeSlide]);
 
-  let timer = setTimeout(() => {
-    setActiveSlide(activeSlide + 1);
-  }, 3500);
   useEffect(() => {
-    slider();
-    return clearTimeout(timer);
-  }, [slider, timer]);
+    slider()
+    const timer = setTimeout(() => {
+      setActiveSlide((prevSlide) => (prevSlide >= 3 ? 1 : prevSlide + 1));
+    }, 3500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [activeSlide,slider]);
 
   const changeByButtons = (e) => {
     if (e.target.id === "left") {
-      setActiveSlide(activeSlide - 1);
+      setActiveSlide((prevSlide) => (prevSlide <= 1 ? 3 : prevSlide - 1));
     } else if (e.target.id === "right") {
-      setActiveSlide(activeSlide + 1);
+      setActiveSlide((prevSlide) => (prevSlide >= 3 ? 1 : prevSlide + 1));
     }
   };
 
@@ -70,7 +75,6 @@ const Slider = () => {
               <img src={usaidLogo} alt="tnet"></img>
             </div>
             <div>
-              {" "}
               <img src={spaceLogo} alt="ufclogo"></img>
             </div>
             <div>
@@ -84,7 +88,6 @@ const Slider = () => {
               <img src={tegetaLogo} alt="ufclogo"></img>
             </div>
             <div>
-              {" "}
               <img src={spectreLogo} alt="tnet"></img>
             </div>
             <div>
