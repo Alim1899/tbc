@@ -42,12 +42,13 @@ const Slider = () => {
   useEffect(() => {
     slider()
     const timer = setTimeout(() => {
-      setActiveSlide((prevSlide) => (prevSlide >= 3 ? 1 : prevSlide + 1));
+      setActiveSlide(activeSlide + 1);
     }, 3500);
-
     return () => {
       clearTimeout(timer);
     };
+    
+
   }, [activeSlide,slider]);
 
   const changeByButtons = (e) => {

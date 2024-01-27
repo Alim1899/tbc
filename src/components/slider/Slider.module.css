@@ -95,3 +95,36 @@
 .rightArrow:hover {
   opacity: 0.6;
 }
+
+@media (max-width: 1100px) {
+  .content {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .content {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .head{
+    font-size: 1.3rem;
+  }
+  .content {
+    width: 90%;
+    grid-template-rows: 25% 50% 25%;
+  }
+  .firstSlide,
+  .secondSlide,
+  .thirdSlide {
+    row-gap: 5%;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 30% 30%;
+  }
+  .firstSlide > div,
+  .secondSlide > div,
+  .thirdSlide > div {
+    display: flex;
+    justify-content: center;
+  }
+}

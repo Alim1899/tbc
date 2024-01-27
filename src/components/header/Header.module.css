@@ -1,16 +1,15 @@
 .main {
-height: 392px;
-margin-top: 92px;
+  height: 392px;
+  margin-top: 92px;
 }
-.headers{
+.headers {
   width: var(--contentWidth);
   margin: auto;
-  margin-top: -300px;  
+  margin-top: -300px;
 }
 .head {
   z-index: 2;
   overflow: hidden;
-
 }
 .headOne,
 .headTwo {
@@ -25,7 +24,8 @@ margin-top: 92px;
   margin-top: 10px;
 }
 .headTwo {
-  font-family: mtavruli;
+  width: 100%;
+  font-family: mtavruli, sans-serif;
   letter-spacing: 2px;
   font-size: 2.45rem;
   margin-top: -15px;
@@ -42,3 +42,32 @@ margin-top: 92px;
   height: 392px;
   object-fit: cover;
 }
+
+@media (max-width: 800px) {
+  .headOne {
+    font-size: 2.5rem;
+  }
+  .headTwo {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 650px) {
+  .headOne {
+    font-size: 2rem;
+  }
+  .headTwo {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .headOne {
+    font-size: 1.5rem;
+  }
+  .headTwo {
+    font-size: 1rem;
+  }
+  .main {
+    height: 300px;
+  }
+}
+

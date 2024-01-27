@@ -68,14 +68,20 @@ const Navbar = () => {
           </nav>
         )}
         {dropdown && (
-          <button type="button" className={classes.dropButton}>
+          !dropMenu?<button type="button" className={classes.dropButton}>
             <img
               alt="icon"
               onClick={showDropdownMenu}
               className={classes.icon}
               src={menuIcon}
             ></img>{" "}
-          </button>
+          </button>: <button onClick={close} className={classes.closeButton}>
+              <img
+                className={classes.icon}
+                alt="close icon"
+                src={closeIcon}
+              ></img>{" "}
+            </button>
         )}
       </div>
 
@@ -84,13 +90,7 @@ const Navbar = () => {
           <div className={classes.blurredArea} onClick={close}></div>
 
           <div className={classes.dropContent}>
-            <button onClick={close} className={classes.closeButton}>
-              <img
-                className={classes.icon}
-                alt="close icon"
-                src={closeIcon}
-              ></img>{" "}
-            </button>
+           
             <nav className={classes.dropNavLinks}>
               <li>
                 {" "}

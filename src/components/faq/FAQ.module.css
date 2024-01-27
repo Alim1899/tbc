@@ -6,7 +6,8 @@
   font-family: sans;
 }
 .content {
-  width: 980px;
+  width: 90vw;
+  max-width: 980px;
   min-height: 484px;
   margin: auto;
   margin-top: 90px;
@@ -15,7 +16,7 @@
 }
 .contentHeader {
   display: flex;
-  width: 980px;
+  max-width: 980px;
   justify-content: space-between;
   font-size: 26px;
   font-weight: 400;
@@ -27,7 +28,7 @@
   transition: color 0.5s ease;}
 
 .question {
-  width: 980px;
+  max-width: 980px;
   border-bottom: 1px solid var(--border);
   font-family: sans-serif;
   font-weight: 100;
@@ -71,4 +72,34 @@
 .allQuest:hover{
   color: var(--whiteText);
   cursor: pointer;
+}
+
+@media (max-width:725px) {
+  .content{
+    width: 90vw;
+  }
+  .contentHeader,.contentHeader > span {
+   
+    font-size: 23px;
+  }
+  .quest1,.quest2,.quest3{
+    font-size: 18px;
+  }
+}
+@media (max-width:600px) {
+  .content{
+    width: 95vw;
+    min-height: 300px;
+  }
+  .contentHeader,.contentHeader > span {
+   
+    font-size: 14px;
+  }
+  .quest1,.quest2,.quest3{
+    font-size: 17px;
+    margin: 20px 0 20px 0;
+  }
+  .header,.footer{
+    font-size: 0.9rem;
+  }
 }

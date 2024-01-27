@@ -34,13 +34,5 @@
   left: 0;
   right: 0;
   overflow-x: hidden;
-}
-.layout::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.layout {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
 }

@@ -64,6 +64,7 @@
 }
 
 .closeButton {
+  margin-left: 60%;
   opacity: 70%;
   background-color: unset;
   border: none;
@@ -85,22 +86,28 @@
   position: absolute;
   top: 92px;
   left: 0;
-  left: 0;
   display: grid;
   grid-template-columns: 50% 50%;
+  @media (max-width: 600px) {
+    grid-template-columns: 30% 70%;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: 20% 80%;
+  }
 }
+
 .blurredArea {
   background-color: var(--darkBackground);
   opacity: 0.7;
   max-width: 100%;
   min-width: 10%;
- 
 }
 .dropContent {
   min-width: 300px;
   background-color: var(--darkBackground);
   list-style-type: none;
   text-align: right;
+  overflow: hidden;
 }
 .dropNavLinks {
   margin-top: 20px;
@@ -139,15 +146,12 @@
   transform-origin: 50% 50%;
 }
 
-
-
-
 body::-webkit-scrollbar {
   width: 0.2em;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--lightBackground); 
+  background-color: var(--lightBackground);
 }
 
 /* For Firefox */
