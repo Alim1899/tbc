@@ -39,6 +39,7 @@ const Slider = () => {
     }
   }, [activeSlide]);
 
+  requestAnimationFrame(slider);
   useEffect(() => {
     slider()
     const timer = setTimeout(() => {
