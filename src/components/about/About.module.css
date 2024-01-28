@@ -45,6 +45,7 @@ max-width: 100vw;
   }
 }
 @media (max-width: 800px) {
+  
   .aboutText{
     font-size: 1.6rem;
   }
@@ -54,9 +55,13 @@ max-width: 100vw;
     font-size: 1.2rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .main{
+   align-items: flex-end;
+  }
   .aboutText{
     font-size: 1rem;
   }
+
 }
 

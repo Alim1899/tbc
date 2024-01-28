@@ -12,6 +12,7 @@ const Navbar = () => {
     if(window.scrollY>0)setNavbarColor('#222222f2')
     else(setNavbarColor('#1a1e1f'))
   });
+ 
 
   const showMenu = () => {
     if (window.innerWidth > 725) {
@@ -31,7 +32,6 @@ const Navbar = () => {
     setDropMenu(false);
   };
   window.addEventListener("load", showMenu);
-  window.addEventListener("change", showMenu);
   window.addEventListener("resize", showMenu);
 
   return (

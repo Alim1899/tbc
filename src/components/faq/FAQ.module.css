@@ -30,8 +30,7 @@
 .question {
   max-width: 980px;
   border-bottom: 1px solid var(--border);
-  font-family: sans-serif;
-  font-weight: 100;
+  font-family:mtavruli, sans-serif;
   cursor: pointer;
 }
 .quest1,
