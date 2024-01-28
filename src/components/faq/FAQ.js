@@ -9,7 +9,6 @@ const FAQ = () => {
   const [showSecond, setShowSecond] = useState(false);
   const [showThird, setShowThird] = useState(false);
   const clickHandler = (e) => {
-    console.log(e.target.id);
     if (e.target.id === "1") {
       setTimeout(() => {
         setShowFirst(!showFirst);
