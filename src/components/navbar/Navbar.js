@@ -1,47 +1,36 @@
 import tbcLogo from "../../assets/tbc.svg";
 import classes from "./Navbar.module.css";
-import { useState } from "react";
+import {  useState } from "react";
 import menuIcon from "../../assets/icons/manu.svg";
 import closeIcon from "../../assets/icons/close.svg";
 const Navbar = () => {
-  const [navbar, showNavbar] = useState(true);
-  const [dropdown, setDropdown] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
   const [dropMenu, setDropMenu] = useState(false);
-  const [navbarColor,setNavbarColor] = useState("#1a1e1f")
-  window.addEventListener('scroll', ()=>{
-    if(window.scrollY>0)setNavbarColor('#222222f2')
-    else(setNavbarColor('#1a1e1f'))
+  const [navbarColor, setNavbarColor] = useState("#1a1e1f");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) setNavbarColor("#222222f2");
+    else setNavbarColor("#1a1e1f");
   });
- 
 
-  const showMenu = () => {
-    if (window.innerWidth > 725) {
-      showNavbar(true);
+  window.addEventListener("resize",()=>{
+    setWidth(window.innerWidth)
+  });
 
-      setDropdown(false);
-      setDropMenu(false);
-    } else {
-      showNavbar(false);
-      setDropdown(true);
-    }
-  };
   const showDropdownMenu = () => {
     setDropMenu(true);
   };
   const close = () => {
     setDropMenu(false);
   };
-  window.addEventListener("load", showMenu);
-  window.addEventListener("resize", showMenu);
 
   return (
-    <div style={{backgroundColor:navbarColor}}  className={classes.main}>
+    <div style={{ backgroundColor: navbarColor }} className={classes.main}>
       <div className={classes.navbar}>
         <div className={classes.logo}>
           <img alt="tbcxacademy" src={tbcLogo}></img>
         </div>
 
-        {navbar && (
+        {width > 725 && (
           <nav className={classes.navLinks}>
             <li>
               {" "}
@@ -67,22 +56,25 @@ const Navbar = () => {
             </li>
           </nav>
         )}
-        {dropdown && (
-          !dropMenu?<button type="button" className={classes.dropButton}>
-            <img
-              alt="icon"
-              onClick={showDropdownMenu}
-              className={classes.icon}
-              src={menuIcon}
-            ></img>{" "}
-          </button>: <button onClick={close} className={classes.closeButton}>
+        {width < 725 &&
+          (!dropMenu ? (
+            <button type="button" className={classes.dropButton}>
+              <img
+                alt="icon"
+                onClick={showDropdownMenu}
+                className={classes.icon}
+                src={menuIcon}
+              ></img>{" "}
+            </button>
+          ) : (
+            <button onClick={close} className={classes.closeButton}>
               <img
                 className={classes.icon}
                 alt="close icon"
                 src={closeIcon}
               ></img>{" "}
             </button>
-        )}
+          ))}
       </div>
 
       {dropMenu && (
@@ -90,7 +82,6 @@ const Navbar = () => {
           <div className={classes.blurredArea} onClick={close}></div>
 
           <div className={classes.dropContent}>
-           
             <nav className={classes.dropNavLinks}>
               <li>
                 {" "}
