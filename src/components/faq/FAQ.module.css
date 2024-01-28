@@ -100,7 +100,7 @@
   .header,.footer{
     font-size: 12px;
   }
-  .steps{
-    font-size: 11px;
+  .steps,.answer{
+    font-size: 12px;
   }
 }

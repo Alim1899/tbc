@@ -10,19 +10,19 @@ const FAQ = () => {
   const [showThird, setShowThird] = useState(false);
   const clickHandler = (e) => {
     console.log(e.target.id);
-    if (e.target.id==='1') {
+    if (e.target.id === "1") {
       setTimeout(() => {
         setShowFirst(!showFirst);
         setShowSecond(false);
         setShowThird(false);
       }, 200);
-    }else  if (e.target.id==='2') {
+    } else if (e.target.id === "2") {
       setTimeout(() => {
         setShowSecond(!showSecond);
         setShowFirst(false);
         setShowThird(false);
       }, 200);
-    }else  if (e.target.id==='3') {
+    } else if (e.target.id === "3") {
       setTimeout(() => {
         setShowThird(!showThird);
         setShowSecond(false);
@@ -35,7 +35,8 @@ const FAQ = () => {
       <div className={classes.content}>
         <div className={classes.faq}>
           <h2 className={classes.contentHeader}>
-            ხშირად დასმული კითხვები<span className={classes.allQuest}>ყველა კითხვა</span>
+            ხშირად დასმული კითხვები
+            <span className={classes.allQuest}>ყველა კითხვა</span>
           </h2>
 
           <div className={classes.question}>
@@ -56,32 +57,31 @@ const FAQ = () => {
                 {" "}
                 <p className={classes.header}>{Questions[0].answer.header}</p>
                 <div className={classes.steps}>
-                    <h5 className={classes.step}>
-                  <span className={classes.span}>
-                    {Questions[0].answer.step1.step}
-                  </span>
-                  {Questions[0].answer.step1.text}
-                </h5>
-                <h5 className={classes.step}>
-                  <span className={classes.span}>
-                    {Questions[0].answer.step2.step}
-                  </span>
-                  {Questions[0].answer.step2.text}
-                </h5>
-                <h5 className={classes.step}>
-                  <span className={classes.span}>
-                    {Questions[0].answer.step3.step}
-                  </span>
-                  {Questions[0].answer.step3.text}
-                </h5>
-                <h5 className={classes.step}>
-                  <span className={classes.span}>
-                    {Questions[0].answer.step4.step}
-                  </span>
-                  {Questions[0].answer.step4.text}
-                </h5>
+                  <h5 className={classes.step}>
+                    <span className={classes.span}>
+                      {Questions[0].answer.step1.step}
+                    </span>
+                    {Questions[0].answer.step1.text}
+                  </h5>
+                  <h5 className={classes.step}>
+                    <span className={classes.span}>
+                      {Questions[0].answer.step2.step}
+                    </span>
+                    {Questions[0].answer.step2.text}
+                  </h5>
+                  <h5 className={classes.step}>
+                    <span className={classes.span}>
+                      {Questions[0].answer.step3.step}
+                    </span>
+                    {Questions[0].answer.step3.text}
+                  </h5>
+                  <h5 className={classes.step}>
+                    <span className={classes.span}>
+                      {Questions[0].answer.step4.step}
+                    </span>
+                    {Questions[0].answer.step4.text}
+                  </h5>
                 </div>
-              
                 <p className={classes.footer}>{Questions[0].answer.footer}</p>
               </div>
             )}
@@ -101,9 +101,7 @@ const FAQ = () => {
               ></img>
             </h6>
             {showSecond && (
-              <div className={classes.answer}>
-                <p className={classes.answer}>{Questions[1].answer}</p>
-              </div>
+              <p className={classes.answer}>{Questions[1].answer}</p>
             )}
           </div>
           <div className={classes.question}>

@@ -56,7 +56,7 @@
     font-size: 2rem;
   }
   .headTwo {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 500px) {
@@ -64,10 +64,21 @@
     font-size: 1.5rem;
   }
   .headTwo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .main {
     height: 170px;
   }
 }
 
+@media (max-width: 400px) {
+  .headOne {
+    font-size: 1.5rem;
+  }
+  .headTwo {
+    font-size: 0.8rem;
+  }
+  .main {
+    height: 170px;
+  }
+}
